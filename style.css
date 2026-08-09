@@ -1,61 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap');
+/* =========================
+   BASIC PAGE
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
-
     font-family: 'Montserrat', sans-serif;
-
     color: #3d302b;
-
     background-color: #fffaf6;
-
     overflow-x: hidden;
 }
-.hero{
-    min-height:100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-   align-items: center;
-   text-align: center;
-   padding: 40px 20px;
-   box-sizing: border-box;
-    
-}
-.small-title{
-    font-family: Arial,sans-serif;
-    font-size: 14px;
-    letter-spacing: 5px;
-    margin: 10px 0 25px;
-}
-h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 60px;
-    font-weight: 500;
-    margin: 10px 0 25px;
-}
-h1 span {
-font-style:italic ;
-line-height:1.8 ;
 
-margin: 0;
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
-.date p {
-    font-family: Arial, sans-serif;
 
-    font-size: 16px;
-    letter-spacing: 4px;
 
-    margin:0 0 8px ;
-}
-.date span{
-    font-size: 28px;
+/* =========================
+   HERO SECTION
+========================= */
 
-}
-.welcome {
-    min-height: 100vh;
-
-    padding: 80px 20px;
+.hero {
+    min-height: 50vh;
 
     display: flex;
     flex-direction: column;
@@ -65,58 +42,121 @@ margin: 0;
 
     text-align: center;
 
-    background-color: #fffaf6;
+    padding: 40px 20px;
 
     box-sizing: border-box;
 }
+
+.small-title {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    letter-spacing: 5px;
+    margin: 10px 0 25px;
+}
+
+h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 60px;
+    font-weight: 500;
+    margin: 10px 0 25px;
+}
+
+h1 span {
+    font-style: italic;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.date p {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    letter-spacing: 4px;
+    margin: 0 0 8px;
+}
+
+
+
+/* =========================
+   WEDDING DETAILS
+========================= */
+
+.details {
+    padding: 100px 20px;
+    text-align: center;
+    background-color: #fffaf6;
+    box-sizing: border-box;
+}
+
 .details h2 {
     font-family: 'Cormorant Garamond', serif;
     font-size: 40px;
     font-weight: normal;
+
     margin-top: 0;
     margin-bottom: 60px;
+
     text-align: center;
-    padding-left:0px ;
+    padding-left: 0;
 }
+
 .section-title {
     font-family: Arial, sans-serif;
     font-size: 13px;
     letter-spacing: 4px;
+
     margin-bottom: 15px;
-    text-align:center;
-    padding-left:0px ;
+
+    text-align: center;
+    padding-left: 0;
 }
- .detail-box {
-    max-width: 700px;
+
+.detail-box {
+    max-width: 900px;
     margin: 0 auto;
 
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px 40px;
 
-    }
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 40px;
+}
+
 .detail h3 {
     font-family: Arial, sans-serif;
     font-size: 12px;
     letter-spacing: 3px;
     margin-bottom: 12px;
 }
-   .detail p {
+
+.detail p {
     font-size: 18px;
     margin: 0;
     line-height: 1.5;
 }
+
+
+/* =========================
+   LOCATION / GOOGLE MAP
+========================= */
+
 .location {
     min-height: 100vh;
+
     padding: 100px 20px;
+
     text-align: center;
+
     background-color: #f8eee9;
+
     box-sizing: border-box;
 }
+
 .location h2 {
     font-family: 'Cormorant Garamond', serif;
+
     font-size: 40px;
     font-weight: 500;
+
     margin-top: 0;
     margin-bottom: 30px;
 }
@@ -126,12 +166,16 @@ margin: 0;
     line-height: 1.6;
     margin-bottom: 40px;
 }
+
 .map-container {
     max-width: 800px;
+
     height: 400px;
+
     margin: 0 auto;
 
     overflow: hidden;
+
     border-radius: 4px;
 }
 
@@ -140,134 +184,43 @@ margin: 0;
     height: 100%;
     border: 0;
 }
-.schedule {
-    min-height: 100vh;
-
-    padding: 100px 20px;
-
-    text-align: center;
-
-    background-color: #fff8f5;
-
-    box-sizing: border-box;
-}
-.schedule h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 40px;
-    font-weight: 500;
-    margin-top: 0;
-    margin-bottom: 70px;
-}
 
 
-/* Timeline */
+/* =========================
+   MAP BUTTON
+========================= */
 
-.timeline {
-    max-width: 700px;
+.map-button {
+    display: inline-block;
 
-    margin: 0 auto;
+    margin-top: 25px;
 
-    text-align: left;
-}
+    padding: 15px 32px;
 
+    background: #3d302b;
 
-/* Individual event */
+    color: white;
 
-.event {
-    display: grid;
+    text-decoration: none;
 
-    grid-template-columns: 150px 1fr;
+    font-family: 'Montserrat', sans-serif;
 
-    gap: 30px;
-
-    padding-bottom: 45px;
-
-    margin-bottom: 45px;
-
-    border-bottom: 1px solid #ded2cd;
-}
-
-
-/* Time */
-
-.event-time {
-    font-family: Arial, sans-serif;
-
-    font-size: 13px;
+    font-size: 11px;
 
     letter-spacing: 2px;
 
-    padding-top: 5px;
+    transition: opacity 0.3s ease;
+}
+
+.map-button:hover {
+    opacity: 0.8;
 }
 
 
-/* Event title */
-
-.event-info h3 {
-    font-size: 22px;
-
-    font-weight: normal;
-
-    margin: 0 0 10px;
-}
-
-
-/* Event description */
-
-.event-info p {
-    font-size: 15px;
-
-    line-height: 1.6;
-
-    margin: 0;
-}
 /* =========================
-   MODULE 6 - PHOTO GALLERY
-   ========================= */
+   RSVP
+========================= */
 
-.gallery {
-    min-height: 100vh;
-    padding: 100px 20px;
-    text-align: center;
-    background-color: #f8eee9;
-    box-sizing: border-box;
-}
-
-.gallery h2 {
-    font-size: 40px;
-    font-weight: normal;
-    margin-top: 0;
-    margin-bottom: 60px;
-}
-.gallery-grid {
-    max-width: 900px;
-    margin: 0 auto;
-
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 15px;
-}
-
-.gallery-item {
-    overflow: hidden;
-    aspect-ratio: 3 / 4;
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    display: block;
-
-    transition: transform 0.5s ease;
-}
-
-.gallery-item img:hover {
-    transform: scale(1.05);
-}
 .rsvp {
     min-height: 60vh;
 
@@ -329,9 +282,11 @@ margin: 0;
 
     font-size: 14px;
 }
+
+
 /* =========================
-   MODULE 8 - FINAL MESSAGE
-   ========================= */
+   FINAL MESSAGE
+========================= */
 
 .final-message {
     min-height: 60vh;
@@ -361,13 +316,11 @@ margin: 0;
     margin: 10px 0 30px;
 }
 
-.final-names {
-    font-size: 18px;
 
-    letter-spacing: 2px;
+/* =========================
+   FOOTER
+========================= */
 
-    margin: 0;
-}
 .footer {
     padding: 50px 20px;
 
@@ -398,25 +351,17 @@ margin: 0;
     margin: 0 0 15px;
 }
 
-.footer span {
-    font-size: 13px;
 
-    letter-spacing: 2px;
-}
 /* =========================
-   MODULE 10 - MOBILE
-   ========================= */
-/* =========================
-   PHASE 2.5 - MOBILE
-   ========================= */
+   MOBILE
+========================= */
 
 @media (max-width: 600px) {
 
-    .welcome {
-        padding: 70px 20px;
+    .hero {
+        padding: 40px 20px;
     }
-
-    .welcome h1 {
+    h1 {
         font-size: 48px;
     }
 
@@ -426,19 +371,25 @@ margin: 0;
 
     .details h2 {
         font-size: 34px;
+
         padding-left: 0;
+
         text-align: center;
+
         margin-bottom: 45px;
     }
 
     .section-title {
         padding-left: 0;
+
         text-align: center;
     }
 
     .detail-box {
         grid-template-columns: 1fr;
+
         gap: 35px;
+
         padding: 0 20px;
     }
 
@@ -452,34 +403,6 @@ margin: 0;
 
     .map-container {
         height: 300px;
-    }
-
-    .schedule {
-        padding: 70px 20px;
-    }
-
-    .schedule h2 {
-        font-size: 34px;
-        margin-bottom: 50px;
-    }
-
-    .event {
-        grid-template-columns: 1fr;
-        gap: 10px;
-        padding-bottom: 30px;
-        margin-bottom: 30px;
-    }
-
-    .gallery {
-        padding: 70px 20px;
-    }
-
-    .gallery h2 {
-        font-size: 34px;
-    }
-
-    .gallery-grid {
-        grid-template-columns: 1fr;
     }
 
     .rsvp {
@@ -497,49 +420,4 @@ margin: 0;
     .final-message h2 {
         font-size: 30px;
     }
-
-}
-.map-button {
-    display: inline-block;
-
-    margin-top: 25px;
-
-    padding: 15px 32px;
-
-    background: #3d302b;
-
-    color: white;
-
-    text-decoration: none;
-
-    font-family: 'Montserrat', sans-serif;
-
-    font-size: 11px;
-
-    letter-spacing: 2px;
-
-    transition: opacity 0.3s ease;
-}
-
-.map-button:hover {
-    opacity: 0.8;
-}
-* {
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
 }
