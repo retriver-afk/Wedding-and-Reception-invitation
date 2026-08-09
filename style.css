@@ -1,0 +1,545 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Montserrat', sans-serif;
+
+    color: #3d302b;
+
+    background-color: #fffaf6;
+
+    overflow-x: hidden;
+}
+.hero{
+    min-height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   align-items: center;
+   text-align: center;
+   padding: 40px 20px;
+   box-sizing: border-box;
+    
+}
+.small-title{
+    font-family: Arial,sans-serif;
+    font-size: 14px;
+    letter-spacing: 5px;
+    margin: 10px 0 25px;
+}
+h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 60px;
+    font-weight: 500;
+    margin: 10px 0 25px;
+}
+h1 span {
+font-style:italic ;
+line-height:1.8 ;
+
+margin: 0;
+}
+.date p {
+    font-family: Arial, sans-serif;
+
+    font-size: 16px;
+    letter-spacing: 4px;
+
+    margin:0 0 8px ;
+}
+.date span{
+    font-size: 28px;
+
+}
+.welcome {
+    min-height: 100vh;
+
+    padding: 80px 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background-color: #fffaf6;
+
+    box-sizing: border-box;
+}
+.details h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 40px;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 60px;
+    text-align: center;
+    padding-left:0px ;
+}
+.section-title {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+    text-align:center;
+    padding-left:0px ;
+}
+ .detail-box {
+    max-width: 700px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px 40px;
+
+    }
+.detail h3 {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+   .detail p {
+    font-size: 18px;
+    margin: 0;
+    line-height: 1.5;
+}
+.location {
+    min-height: 100vh;
+    padding: 100px 20px;
+    text-align: center;
+    background-color: #f8eee9;
+    box-sizing: border-box;
+}
+.location h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 40px;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.location-text {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+.map-container {
+    max-width: 800px;
+    height: 400px;
+    margin: 0 auto;
+
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+.schedule {
+    min-height: 100vh;
+
+    padding: 100px 20px;
+
+    text-align: center;
+
+    background-color: #fff8f5;
+
+    box-sizing: border-box;
+}
+.schedule h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 40px;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 70px;
+}
+
+
+/* Timeline */
+
+.timeline {
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    text-align: left;
+}
+
+
+/* Individual event */
+
+.event {
+    display: grid;
+
+    grid-template-columns: 150px 1fr;
+
+    gap: 30px;
+
+    padding-bottom: 45px;
+
+    margin-bottom: 45px;
+
+    border-bottom: 1px solid #ded2cd;
+}
+
+
+/* Time */
+
+.event-time {
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    padding-top: 5px;
+}
+
+
+/* Event title */
+
+.event-info h3 {
+    font-size: 22px;
+
+    font-weight: normal;
+
+    margin: 0 0 10px;
+}
+
+
+/* Event description */
+
+.event-info p {
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    margin: 0;
+}
+/* =========================
+   MODULE 6 - PHOTO GALLERY
+   ========================= */
+
+.gallery {
+    min-height: 100vh;
+    padding: 100px 20px;
+    text-align: center;
+    background-color: #f8eee9;
+    box-sizing: border-box;
+}
+
+.gallery h2 {
+    font-size: 40px;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 60px;
+}
+.gallery-grid {
+    max-width: 900px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    aspect-ratio: 3 / 4;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.5s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+.rsvp {
+    min-height: 60vh;
+
+    padding: 100px 20px;
+
+    text-align: center;
+
+    background-color: #f8eee9;
+
+    box-sizing: border-box;
+}
+
+.rsvp h2 {
+    font-size: 45px;
+
+    font-weight: normal;
+
+    margin-top: 0;
+
+    margin-bottom: 25px;
+}
+
+.rsvp-text {
+    max-width: 500px;
+
+    margin: 0 auto 35px;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+.rsvp-button {
+    display: inline-block;
+
+    padding: 14px 35px;
+
+    background-color: #3d302b;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+}
+
+.rsvp-button:hover {
+    opacity: 0.8;
+}
+
+.contact-text {
+    margin-top: 30px;
+
+    font-size: 14px;
+}
+/* =========================
+   MODULE 8 - FINAL MESSAGE
+   ========================= */
+
+.final-message {
+    min-height: 60vh;
+
+    padding: 100px 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background-color: #fff8f5;
+
+    box-sizing: border-box;
+}
+
+.final-message h2 {
+    font-size: 38px;
+
+    font-weight: normal;
+
+    line-height: 1.4;
+
+    margin: 10px 0 30px;
+}
+
+.final-names {
+    font-size: 18px;
+
+    letter-spacing: 2px;
+
+    margin: 0;
+}
+.footer {
+    padding: 50px 20px;
+
+    text-align: center;
+
+    background-color: #3d302b;
+
+    color: white;
+
+    box-sizing: border-box;
+}
+
+.footer p {
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    margin: 0 0 15px;
+}
+
+.footer h3 {
+    font-size: 20px;
+
+    font-weight: normal;
+
+    margin: 0 0 15px;
+}
+
+.footer span {
+    font-size: 13px;
+
+    letter-spacing: 2px;
+}
+/* =========================
+   MODULE 10 - MOBILE
+   ========================= */
+/* =========================
+   PHASE 2.5 - MOBILE
+   ========================= */
+
+@media (max-width: 600px) {
+
+    .welcome {
+        padding: 70px 20px;
+    }
+
+    .welcome h1 {
+        font-size: 48px;
+    }
+
+    .details {
+        padding: 70px 20px;
+    }
+
+    .details h2 {
+        font-size: 34px;
+        padding-left: 0;
+        text-align: center;
+        margin-bottom: 45px;
+    }
+
+    .section-title {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .detail-box {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 0 20px;
+    }
+
+    .location {
+        padding: 70px 20px;
+    }
+
+    .location h2 {
+        font-size: 34px;
+    }
+
+    .map-container {
+        height: 300px;
+    }
+
+    .schedule {
+        padding: 70px 20px;
+    }
+
+    .schedule h2 {
+        font-size: 34px;
+        margin-bottom: 50px;
+    }
+
+    .event {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+    }
+
+    .gallery {
+        padding: 70px 20px;
+    }
+
+    .gallery h2 {
+        font-size: 34px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rsvp {
+        padding: 70px 20px;
+    }
+
+    .rsvp h2 {
+        font-size: 38px;
+    }
+
+    .final-message {
+        padding: 70px 20px;
+    }
+
+    .final-message h2 {
+        font-size: 30px;
+    }
+
+}
+.map-button {
+    display: inline-block;
+
+    margin-top: 25px;
+
+    padding: 15px 32px;
+
+    background: #3d302b;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    transition: opacity 0.3s ease;
+}
+
+.map-button:hover {
+    opacity: 0.8;
+}
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}

@@ -1,0 +1,1 @@
+console.log("Weeding website loaded sucessfully");
