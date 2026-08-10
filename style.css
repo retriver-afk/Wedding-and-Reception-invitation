@@ -2,7 +2,20 @@
 /* =========================
    BASIC PAGE
 ========================= */
+/* =========================
+   PHASE 3.17 - AUTUMN COLORS
+========================= */
 
+:root {
+    --autumn-dark: #3d302b;
+    --autumn-brown: #6f4536;
+    --autumn-muted: #8a5a44;
+    --autumn-accent: #9a654d;
+
+    --autumn-cream: #fffaf4;
+    --autumn-beige: #eee1d3;
+    --autumn-line: #d8c4b5;
+}
 * {
     box-sizing: border-box;
 }
@@ -18,6 +31,8 @@ body {
     color: #3d302b;
     background-color: #fffaf6;
     overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 }
 
 img {
@@ -26,13 +41,12 @@ img {
     display: block;
 }
 
-
 /* =========================
-   HERO SECTION
+   PHASE 3.1 -HERO
 ========================= */
 
 .hero {
-    min-height: 50vh;
+    min-height: 85vh;
 
     display: flex;
     flex-direction: column;
@@ -42,30 +56,62 @@ img {
 
     text-align: center;
 
-    padding: 40px 20px;
+    padding: 80px 20px;
 
     box-sizing: border-box;
+
+    background:
+        linear-gradient(
+            rgba(244, 232, 218, 0.55),
+            rgba(255, 250, 244, 0.75)
+        ),
+        url("mountains.png") center bottom / cover no-repeat;
 }
 
 .small-title {
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    letter-spacing: 5px;
-    margin: 10px 0 25px;
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    letter-spacing: 6px;
+
+    text-transform: uppercase;
+
+    color: #8a5a44;
+
+    margin: 0 0 28px;
 }
+
+/* =========================
+   PHASE 3.18 - HERO NAMES
+========================= */
 
 h1 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 60px;
+
+    font-size: 64px;
     font-weight: 500;
+
+    letter-spacing: 1px;
+
+    line-height: 1.05;
+
+    color: #3d302b;
+
     margin: 10px 0 25px;
 }
 
 h1 span {
     font-style: italic;
-    line-height: 1.8;
+
+    line-height: 1.2;
+
+    color: #6f4536;
+
     margin: 0;
 }
+
 
 
 /* =========================
@@ -73,21 +119,33 @@ h1 span {
 ========================= */
 
 .details {
-    padding: 100px 20px;
-    text-align: center;
-    background-color: #fffaf6;
+    padding: 110px 30px;
+    background-color: #fffaf4;
     box-sizing: border-box;
 }
-
+.detail {
+    position: relative;
+}
+.detail:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: -15px;
+    top: 10%;
+    width: 1px;
+    height: 80%;
+    background-color: #d8c4b5;
+}
 .details h2 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 40px;
-    font-weight: normal;
 
-    margin-top: 0;
-    margin-bottom: 60px;
+    font-size: 48px;
+    font-weight: 500;
+
+    color: #3d302b;
 
     text-align: center;
+
+    margin: 0 0 70px;
     padding-left: 0;
 }
 
@@ -103,27 +161,45 @@ h1 span {
 }
 
 .detail-box {
-    max-width: 900px;
+    max-width: 950px;
+
     margin: 0 auto;
 
     display: grid;
 
     grid-template-columns: repeat(3, 1fr);
 
-    gap: 40px;
+    gap: 30px;
+
+    text-align: center;
 }
 
 .detail h3 {
-    font-family: Arial, sans-serif;
-    font-size: 12px;
-    letter-spacing: 3px;
-    margin-bottom: 12px;
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    color: #5f3f32;
+
+    text-transform: uppercase;
+
+    margin: 0 0 16px;
 }
 
 .detail p {
-    font-size: 18px;
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 25px;
+    font-weight: 500;
+
+    color: #3d302b;
+
+    line-height: 1.4;
+
     margin: 0;
-    line-height: 1.5;
 }
 
 
@@ -132,13 +208,15 @@ h1 span {
 ========================= */
 
 .location {
-    min-height: 100vh;
+    min-height: 90vh;
 
-    padding: 100px 20px;
+    padding: 110px 30px;
 
     text-align: center;
 
-    background-color: #f8eee9;
+    .location {
+    background-color: var(--autumn-beige);
+}
 
     box-sizing: border-box;
 }
@@ -146,35 +224,74 @@ h1 span {
 .location h2 {
     font-family: 'Cormorant Garamond', serif;
 
-    font-size: 40px;
+    font-size: 48px;
     font-weight: 500;
 
-    margin-top: 0;
-    margin-bottom: 30px;
+    color: #3d302b;
+
+    margin: 0 0 25px;
 }
 
 .location-text {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 40px;
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 16px;
+    font-weight: 400;
+
+    line-height: 1.8;
+
+    color: #60483d;
+
+    margin: 0 auto 45px;
+
+    max-width: 500px;
 }
 
 .map-container {
-    max-width: 800px;
-
-    height: 400px;
+    max-width: 850px;
+    height: 420px;
 
     margin: 0 auto;
 
     overflow: hidden;
-
-    border-radius: 4px;
 }
 
 .map-container iframe {
     width: 100%;
     height: 100%;
+
     border: 0;
+
+    display: block;
+}
+
+.map-button {
+    display: inline-block;
+
+    margin-top: 30px;
+
+    padding: 15px 35px;
+
+    background-color: #6f4536;
+
+    color: #fffaf4;
+
+    text-decoration: none;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 11px;
+    font-weight: 500;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    transition: opacity 0.3s ease;
+}
+
+.map-button:hover {
+    opacity: 0.8;
 }
 
 
@@ -214,55 +331,71 @@ h1 span {
 ========================= */
 
 .rsvp {
-    min-height: 60vh;
+    min-height: 65vh;
 
-    padding: 100px 20px;
+    padding: 110px 30px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
 
     text-align: center;
-
-    background-color: #f8eee9;
+.rsvp-button {
+    background-color: var(--autumn-brown);
+}
 
     box-sizing: border-box;
 }
 
 .rsvp h2 {
-    font-size: 45px;
+    font-family: 'Cormorant Garamond', serif;
 
-    font-weight: normal;
+    font-size: 50px;
+    font-weight: 500;
 
-    margin-top: 0;
+    color: #3d302b;
 
-    margin-bottom: 25px;
+    margin: 0 0 25px;
 }
 
 .rsvp-text {
-    max-width: 500px;
+    max-width: 520px;
 
-    margin: 0 auto 35px;
+    margin: 0 auto 40px;
 
-    font-size: 17px;
+    font-family: 'Montserrat', sans-serif;
 
-    line-height: 1.7;
+    font-size: 15px;
+    font-weight: 400;
+
+    line-height: 1.8;
+
+    color: #60483d;
 }
 
 .rsvp-button {
     display: inline-block;
 
-    padding: 14px 35px;
+    padding: 16px 40px;
 
-    background-color: #3d302b;
+    background-color: #6f4536;
 
-    color: white;
+    color: #fffaf4;
 
     text-decoration: none;
 
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
 
-    font-size: 12px;
+    font-size: 11px;
+    font-weight: 500;
 
-    letter-spacing: 2px;
+    letter-spacing: 3px;
 
-    transition: 0.3s;
+    text-transform: uppercase;
+
+    transition: opacity 0.3s ease;
 }
 
 .rsvp-button:hover {
@@ -270,18 +403,22 @@ h1 span {
 }
 
 .contact-text {
-    margin-top: 30px;
+    margin-top: 28px;
 
-    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    color: #60483d;
 }
-
-
 /* =========================
    FINAL MESSAGE
 ========================= */
 
 .final-message {
-    min-height: 60vh;
+    min-height: 55vh;
 
     padding: 100px 20px;
 
@@ -293,56 +430,77 @@ h1 span {
 
     text-align: center;
 
-    background-color: #fff8f5;
+    background-color: #eee1d3;
 
     box-sizing: border-box;
 }
 
 .final-message h2 {
-    font-size: 38px;
+    max-width: 700px;
 
-    font-weight: normal;
+    font-family: 'Cormorant Garamond', serif;
 
-    line-height: 1.4;
+    font-size: 42px;
+    font-weight: 500;
+
+    line-height: 1.35;
+
+    color: #3d302b;
 
     margin: 10px 0 30px;
 }
-
 
 /* =========================
    FOOTER
 ========================= */
 
 .footer {
-    padding: 50px 20px;
+    padding: 65px 20px;
 
     text-align: center;
 
-    background-color: #3d302b;
+    background-color: #4a342c;
 
-    color: white;
+    color: #fffaf4;
 
     box-sizing: border-box;
 }
 
 .footer p {
-    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 10px;
+    font-weight: 500;
 
     letter-spacing: 4px;
 
     text-transform: uppercase;
 
-    margin: 0 0 15px;
+    margin: 0 0 18px;
+
+    color: #d8bca8;
 }
 
 .footer h3 {
-    font-size: 20px;
+    font-family: 'Cormorant Garamond', serif;
 
-    font-weight: normal;
+    font-size: 30px;
+    font-weight: 500;
 
-    margin: 0 0 15px;
+    margin: 0 0 18px;
+
+    color: #fffaf4;
 }
 
+.footer span {
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    color: #d8bca8;
+}
 
 /* =========================
    MOBILE
@@ -360,7 +518,9 @@ h1 span {
     .details {
         padding: 70px 20px;
     }
-
+    .detail:not(:last-child)::after {
+    display: none;
+      }
     .details h2 {
         font-size: 34px;
 
@@ -412,4 +572,484 @@ h1 span {
     .final-message h2 {
         font-size: 30px;
     }
+}
+
+.details h2::after,
+.location h2::after,
+.rsvp h2::after {
+    content: "";
+    
+    display: block;
+
+    width: 45px;
+    height: 1px;
+
+    margin: 22px auto 0;
+
+    background-color: #9a654d;
+}
+/* =========================
+   PHASE 3.8 - AUTUMN HERO ACCENT
+========================= */
+
+.hero::before {
+    content: "❧";
+
+    position: absolute;
+
+    top: 35px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 28px;
+
+    color: #9a654d;
+}
+/* =========================
+   PHASE 3.9 - SUBTLE ANIMATIONS
+========================= */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero .small-title {
+    animation: fadeUp 1s ease-out;
+}
+
+.hero h1 {
+    animation: fadeUp 1s ease-out 0.15s both;
+}
+
+.details {
+    animation: fadeUp 1s ease-out 0.1s both;
+}
+
+.rsvp-button,
+.map-button {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.rsvp-button:hover,
+.map-button:hover {
+    transform: translateY(-2px);
+    opacity: 0.85;
+}
+/* =========================
+   PHASE 3.11 - SCROLL REVEAL
+========================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* =========================
+   PHASE 3.12 - BUTTON POLISH
+========================= */
+
+.rsvp-button,
+.map-button {
+    position: relative;
+
+    overflow: hidden;
+
+    border: 1px solid #6f4536;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.rsvp-button:hover,
+.map-button:hover {
+    background-color: #fffaf4;
+
+    color: #6f4536;
+
+    transform: translateY(-2px);
+}
+/* =========================
+   PHASE 3.13 - SECTION TRANSITIONS
+========================= */
+
+.details,
+.rsvp {
+    border-top: 1px solid #eadcd0;
+}
+
+.location,
+.final-message {
+    border-top: 1px solid #d8c4b5;
+}
+/* =========================
+   PHASE 3.14 - TYPOGRAPHY
+========================= */
+
+.details h2,
+.location h2,
+.rsvp h2,
+.final-message h2 {
+    font-family: 'Cormorant Garamond', serif;
+    color: #3d302b;
+}
+
+.small-title,
+.detail h3,
+.location-text,
+.rsvp-text,
+.contact-text,
+.footer p,
+.footer span {
+    font-family: 'Montserrat', sans-serif;
+}
+/* =========================
+   PHASE 3.16 - AUTUMN LEAVES
+========================= */
+
+.hero::after {
+    content: "🍂";
+
+    position: absolute;
+    bottom: 45px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-size: 24px;
+
+    opacity: 0.7;
+
+    animation: none;
+}
+/* =========================
+   PHASE 3.19 - SECTION SPACING
+========================= */
+
+.details,
+.location,
+.rsvp,
+.final-message {
+    overflow: hidden;
+}
+/* =========================
+   PHASE 3.20 - FINAL POLISH
+========================= */
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+a {
+    transition: opacity 0.3s ease;
+}
+
+img {
+    border-radius: 2px;
+}
+
+iframe {
+    display: block;
+}
+/* =========================
+   PHASE 4.1 — AUTUMN MOUNTAIN
+========================= */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 260px;
+
+    background-image: url("mountains.png");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+
+    opacity: 0.35;
+
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero > * {
+    position: relative;
+    z-index: 1;
+}
+/* =========================
+   PHASE 4.2 — AUTUMN FLOWERS
+========================= */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-flower {
+    position: absolute;
+
+    width: 230px;
+
+    z-index: 1;
+    pointer-events: none;
+
+    opacity: 0.40;
+}
+
+.hero-flower img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.hero-flower-left {
+    left: -35px;
+    bottom: -20px;
+}
+
+.hero-flower-right {
+    right: -35px;
+    bottom: -20px;
+    transform: scaleX(-1);
+}
+
+/* Keep your wedding text above the flowers */
+.hero > *:not(.hero-flower) {
+    position: relative;
+    z-index: 2;
+}
+
+/* =========================
+   PHASE 4.3 — DETAILS FLOWERS
+========================= */
+
+.details {
+    position: relative;
+    overflow: hidden;
+}
+
+.details-flower {
+    position: absolute;
+
+    width: 130px;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    opacity: 0.30;
+
+    pointer-events: none;
+    z-index: 0;
+}
+
+.details-flower img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.details-flower-left {
+    left: -25px;
+}
+
+.details-flower-right {
+    right: -25px;
+    transform: translateY(-50%) scaleX(-1);
+}
+
+.details > *:not(.details-flower) {
+    position: relative;
+    z-index: 1;
+}
+/* =========================
+   PHASE 4.4 — LOCATION FLOWERS
+========================= */
+
+.location {
+    position: relative;
+    overflow: hidden;
+}
+
+.location-flower {
+    position: absolute;
+
+    width: 125px;
+
+    opacity: 0.30;
+
+    pointer-events: none;
+    z-index: 0;
+}
+
+.location-flower img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* TOP SIDE FLOWERS */
+
+.location-flower-left-top {
+    left: -30px;
+    top: 70px;
+}
+
+.location-flower-right-top {
+    right: -30px;
+    top: 70px;
+    transform: scaleX(-1);
+}
+
+/* BOTTOM SIDE FLOWERS */
+
+.location-flower-left-bottom {
+    left: -30px;
+    bottom: 50px;
+    transform: scaleY(-1);
+}
+
+.location-flower-right-bottom {
+    right: -30px;
+    bottom: 50px;
+    transform: scale(-1, -1);
+}
+
+/* Keep location content above decorations */
+
+.location > *:not(.location-flower) {
+    position: relative;
+    z-index: 1;
+}
+/* =========================
+   PHASE 4.5 — RSVP FLOWER
+========================= */
+
+.rsvp {
+    position: relative;
+    overflow: hidden;
+}
+
+.rsvp-flower {
+    position: absolute;
+
+    width: 150px;
+
+    top: 25px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    opacity: 0.30;
+
+    pointer-events: none;
+    z-index: 0;
+}
+
+.rsvp-flower img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Keep RSVP content above the decoration */
+
+.rsvp > *:not(.rsvp-flower) {
+    position: relative;
+    z-index: 1;
+}
+/* =========================
+   PHASE 4.6 — FINAL MESSAGE
+========================= */
+
+.final-message {
+    position: relative;
+    overflow: hidden;
+}
+
+.final-message-flower {
+    position: absolute;
+
+    width: 145px;
+
+    left: 50%;
+    bottom: -35px;
+
+    transform: translateX(-50%);
+
+    opacity: 0.30;
+
+    pointer-events: none;
+    z-index: 0;
+}
+
+.final-message-flower img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.final-message > *:not(.final-message-flower) {
+    position: relative;
+    z-index: 1;
+}
+/* =========================
+   PHASE 4.7 — FOOTER FLOWER
+========================= */
+
+footer {
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-flower {
+    position: absolute;
+
+    width: 75px;
+
+    left: 50%;
+    top: -25px;
+
+    transform: translateX(-50%);
+
+    opacity: 0.22;
+
+    pointer-events: none;
+    z-index: 0;
+}
+
+.footer-flower img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+footer > *:not(.footer-flower) {
+    position: relative;
+    z-index: 1;
 }
